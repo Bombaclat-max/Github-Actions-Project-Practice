@@ -98,8 +98,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check BindPlane Service Status
         run: |
-          echo "Listing all active services:"
-          systemctl status bindplane | grep active
+          systemctl status bindplane
 
   build_docker_image_and_push:
     runs-on: self-hosted
